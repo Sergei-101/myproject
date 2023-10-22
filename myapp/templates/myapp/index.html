@@ -1,0 +1,24 @@
+{% extends 'myapp2/base.html' %}
+
+
+{% block content %}
+<h1>Список продукции на сайте</h1>
+    <table>
+        <tr>
+            <th>Наименование:</th>
+            <th>Цена:</th>
+            <th>Кол-во:</th>
+        </tr>
+        {% for product in products %}
+
+            <tr>
+                <th>{{product.product_name}}</th>
+                <th>{{product.price_product}}</th>
+                <th>{{product.quantity_product}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+{% endblock %}
